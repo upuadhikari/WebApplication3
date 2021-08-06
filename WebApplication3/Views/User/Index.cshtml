@@ -1,0 +1,19 @@
+﻿@model List<WebApplication3.Models.User>
+<a asp-action="Create" asp-controller="user" class="btn">Create User</a> <br />
+
+@if (Model.Count < 1)
+{
+    <p>No data found</p>
+}
+
+else
+{
+    @foreach (var obj in Model)
+    {
+        @obj.Id;
+        @obj.name;
+        <a asp-action="edit" asp-route-id="@obj.Id" class="btn">Edit</a>
+        <a asp-action="delete" asp-route-id="@obj.Id" class="btn">Delete</a>
+        <br />
+    }
+}

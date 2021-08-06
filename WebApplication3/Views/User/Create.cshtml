@@ -1,0 +1,12 @@
+﻿@model WebApplication3.Models.User
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    @Html.ValidationSummary()
+
+    Name : <input asp-for="name" type="text" />
+    Role : <input asp-for="Role" type="text" />
+
+    <input type="submit" value="submit" />
+
+</form>
